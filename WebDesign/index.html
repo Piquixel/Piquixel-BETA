@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web Design</title>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="icon" type="icon/png" sizes="32x32" href="../images/icon-32.png" />
+    <script src="../javascripts/jquery-3.4.1.js"></script>
+</head>
+
+<body>
+    <nav>
+        <div class="logo">
+            <img src="../images/unnamed.png" />
+        </div>
+        <div class="nav-links">
+            <ul>
+                <li><a href="#" id="h" class="active">Home</a></li>
+                <li><a href="#phonekit" id="p">Phone</a></li>
+                <li><a href="#" id="a">Accesories</a></li>
+                <li><a href="#" id="c">Cart</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="main">
+        <div class="information">
+            <img src="../images/nokia_5_1_Plus-front_back-Blue-ROW2.png" class="mobile" />
+            <div id="circle">
+                <div class="feature one">
+                    <img src="../images/camera.png" />
+                    <div>
+                        <h1>Camera</h1>
+                        <p>12MP, Wide Angle Lens</p>
+                    </div>
+                </div>
+                <div class="feature two">
+                    <img src="../images/cpu.png" />
+                    <div>
+                        <h1>Processor</h1>
+                        <p>Snapdragon Octa-core 11nm</p>
+                    </div>
+                </div>
+                <div class="feature three">
+                    <img src="../images/display.png" />
+                    <div>
+                        <h1>Display</h1>
+                        <p>6.5" Mini-Drop Fullscreen</p>
+                    </div>
+                </div>
+                <div class="feature four">
+                    <img src="../images/battery.png" />
+                    <div>
+                        <h1>Battery Life</h1>
+                        <p>5000mAh, 720Hrs Standby</p>
+                    </div>
+                </div>
+            </div>
+            <div class="overlay"></div>
+        </div>
+        <div class="controls">
+            <img src="../images/up.png" id="upBtn" />
+            <h3>Features</h3>
+            <img src="../images/up.png" id="downBtn" />
+        </div>
+    </div>
+    <div class="phonekit" id="phonekit">
+        <section>
+        <div class="techSheet">
+            <div class="container">
+                <div class="card">
+                    <div class="content">
+                        <img src="../images/Nokia_5_1_Plus_PDS-DESIGN_back_popup-desktop.png"/>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="content">
+                        <img src="../images/Nokia_5_1_Plus_PDS-DESIGN_front_popup-mobile-ROW2.png"/>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="content">
+                        <img src="../images/Nokia_5_1_Plus_PDS-DESIGN_side_popup-desktop.png"/>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </section>
+    </div>
+    <script>
+        var home = document.getElementById('h');
+        var accesories = document.getElementById('a');
+        var phone = document.getElementById('p');
+        var cart = document.getElementById('c');
+
+        var circle = document.getElementById("circle");
+        var upBtn = document.getElementById("upBtn");
+        var downBtn = document.getElementById("downBtn");
+
+        var rotateValue = circle.style.transform;
+        var rotateSum;
+
+        upBtn.onclick = function () {
+            rotateSum = rotateValue + "rotate(-90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+
+        downBtn.onclick = function () {
+            rotateSum = rotateValue + "rotate(90deg)";
+            circle.style.transform = rotateSum;
+            rotateValue = rotateSum;
+        }
+
+        home.onclick = function () {
+            home.classList.add('active');
+            accesories.classList.remove('active');
+            phone.classList.remove('active');
+            cart.classList.remove('active');
+        }
+
+        accesories.onclick = function () {
+            home.classList.remove('active');
+            accesories.classList.add('active');
+            phone.classList.remove('active');
+            cart.classList.remove('active');
+        }
+
+        phone.onclick = function () {
+            home.classList.remove('active');
+            accesories.classList.remove('active');
+            phone.classList.add('active');
+            cart.classList.remove('active');
+        }
+
+        cart.onclick = function () {
+            home.classList.remove('active');
+            accesories.classList.remove('active');
+            phone.classList.remove('active');
+            cart.classList.add('active');
+        }
+    </script>
+</body>
+
+</html>

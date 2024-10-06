@@ -1,0 +1,271 @@
+@import url('https://fonts.googleapis.com/css2?family=Dosis&family=Nunito&family=Quicksand&display=swap');
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	user-select: none;
+	outline: none;
+}
+
+::-webkit-scrollbar {
+	width: 5px;
+	background: transparent;
+}
+
+::-webkit-scrollbar:hover {
+	width: 7px;
+}
+
+::-webkit-scrollbar-thumb {
+	background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb:hover {
+	background: rgba(255, 255, 255, 0.3);
+}
+
+::-webkit-scrollbar-button {
+	background: none;
+}
+
+html {
+	overflow-y: overlay;
+	overflow-x: hidden;
+	scroll-behavior: smooth;
+	background: #212121;
+}
+
+.homeimg {
+	position: relative;
+	width: 100%;
+	height: calc(100vh - 55px);
+	background: url(images/bg0.png);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+.homeimg h3 {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	transform: translateY(-50%);
+	top: 50%;
+	text-transform: uppercase;
+	text-shadow: 0 5px 10px rgba(0, 0, 0, 0.7);
+	font-size: 32pt;
+	letter-spacing: 2px;
+	font-family: 'Quicksand', sans-serif;
+	color: #fff;
+}
+
+.homeimg span {
+	position: absolute;
+	width: 225px;
+	height: 2px;
+	background: #fff;
+	transform: translate(-50%, -50%);
+	top: calc(50% + 35px);
+	left: 50%;
+}
+
+.homeimg h5 {
+	position: absolute;
+	top: calc(50% + 50px);
+	left: 50%;
+	color: #fff;
+	transform: translate(-50%, -50%);
+	text-transform: capitalize;
+	font-family: 'Dosis', sans-serif;
+	font-size: 13pt;
+	letter-spacing: 2px;
+}
+
+.homeimg .links {
+	position: relative;
+	transform: translate(-50%, -50%);
+	top: calc(50% + 35px);
+	left: 50%;
+	width: max-content;
+}
+
+.homeimg a {
+	position: relative;
+	margin: 0 10px;
+	color: #fff;
+	text-decoration: none;
+	font-family: 'Nunito', sans-serif;
+	padding: 5px 10px;
+	background: #ff6a00;
+	border-radius: 20px;
+	font-size: 13pt;
+	border: 2px solid transparent;
+	backdrop-filter: blur(15px);
+	overflow: hidden;
+	transition: background 0.3s ease-in-out, border 0.3s;
+}
+
+.homeimg a:hover {
+	background-color: #ff6a0040;
+	border-color: #ff6a00;
+	transition: background 0.3s ease-in-out;
+}
+
+.homeimg a:last-child {
+	background: #fff;
+	color: #ff6a00;
+}
+
+.homeimg a:last-child:hover {
+	background-color: #ffffff40;
+	border-color: #fff;
+	transition: background 0.3s ease-in-out;
+}
+
+nav {
+	position: sticky;
+	width: 100%;
+	height: 55px;
+	background: #272727;
+	overflow: hidden;
+	top: -2px;
+	/* border-bottom; */
+	border-top: 1px solid #313131;
+	box-shadow: 0 -10px 10px 2px rgba(0, 0, 0, 0.3);
+	z-index: 100;
+}
+
+nav ul {
+	position: relative;
+	display: inline-flex;
+	left: 50%;
+	transform: translateX(-50%);
+}
+
+nav li {
+	position: relative;
+	list-style: none;
+	transform: translateY(-25%);
+}
+
+nav li a {
+	position: relative;
+	display: flex;
+	align-items: center;
+	color: #fff;
+	text-decoration: none;
+	max-height: 55px;
+	padding: 55px;
+	font-family: 'Nunito', sans-serif;
+	transition: background 0.3s ease-in-out;
+}
+
+nav li a.in::before {
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 30%;
+	background-color: #ffffff40;
+	top: 0;
+	left: 0;
+	transition: height 0.3s ease-in-out, background 0.3s ease-in-out;
+}
+
+nav li a:hover {
+	background-color: #ffffff0d;
+}
+
+nav li a.in:hover {
+	background-color: transparent;
+}
+
+nav li a.in:hover::before {
+	height: 100%;
+	background-color: #ffffff0d;
+}
+
+.frienav {
+	top: 0;
+	opacity: 0;
+	visibility: hidden;
+	right: -277px;
+	position: fixed;
+	width: 275px;
+	height: 100vh;
+	background: #272727;
+	z-index: 101;
+	box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.5);
+	overflow: hidden;
+	transition: right 0.3s ease-in-out, opacity 0.3s, visibility 0.3s;
+}
+
+.frienav h2 {
+	position: relative;
+	display: flex;
+	justify-content: center;
+	top: 10px;
+	color: #fff;
+	font-family: 'Dosis', sans-serif;
+}
+
+.frienav ul {
+	position: relative;
+	top: 30px;
+}
+
+.frienav li {
+	list-style: none;
+}
+
+#close {
+	position: absolute;
+	color: #fff;
+	text-decoration: none;
+	font-size: 26pt;
+	right: 13px;
+	top: 0;
+}
+
+.frienav li a {
+	position: relative;
+	display: flex;
+	max-width: 275px;
+	margin-bottom: 15px;
+	text-align: center;
+	align-items: center;
+	height: 110px;
+	left: 0;
+	color: #fff;
+	text-decoration: none;
+	font-family: 'Nunito', sans-serif;
+	transition: all 0.3s ease-in-out;
+}
+
+.frienav li a:hover {
+	background: #212121;
+	padding: 5px 0;
+}
+
+.frienav a img {
+	position: relative;
+	display: inline;
+	border-radius: 50%;
+	width: 105px;
+	left: -10px;
+	margin-left: 25px;
+	transform: scale(0.9);
+	transition: all 0.3s;
+	object-fit: none;
+}
+
+.frienav li a:hover img {
+	box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.4);
+	transform: scale(1);
+}
+
+article {
+	position: relative;
+	height: 250vh;
+}

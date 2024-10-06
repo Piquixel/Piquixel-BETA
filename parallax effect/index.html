@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piquixel | Parallax</title>
+    <link rel="stylesheet" type="text/css" href="styles/style.css" />
+    <link rel="apple-touch-icon" type="icon/png" sizes="180x180" href="../images/icon-180.png" />
+    <link rel="icon" type="icon/png" sizes="32x32" href="../images/icon-32.png" />
+    <link rel="icon" type="icon/png" sizes="16x16" href="../images/icon-16.png" />
+    <link rel="stylesheet" type="text/css" href="../styles/all.min.css"/>
+    <script src="../javascripts/jquery-3.4.1.js"></script>
+    <script src="javascript/script.js"></script>
+</head>
+
+<body>
+    <nav>
+        <img src="../images/logo.png" />
+        <ul>
+            <li><a href="../index.html">Accueil</a></li>
+            <li><a href="javascript:void(0)" onclick="videoMenu()">Vidéos</a></li>
+            <li><a href="../Communauté/index.html">Communauté</a></li>
+            <li><a href="../Projets/index.html">Projets</a></li>
+            <li><a href="javascript:void(0)" class="actif" onclick="plus()">Plus</a></li>
+            </div>
+        </ul>
+        <div id="plus-menu">
+            <i class="pin"></i>
+            <div>
+            <a href="../CV/index.html">Curriculum vitæ</a>
+            <a href="../parallax effect/index.html">Parallax Page</a>
+            <a href="javascript:void(0)" onclick="plusFerme()" id="closebtn">&times;</a>
+            </div>
+        </div>
+    </nav>
+    <div id="menu">
+        <div id="menu-video">
+            <a href="javascript:void(0)" onclick="quitVideo()" id="ferm">&times;</a>
+            <ul>
+                <li><a href="https://www.youtube.com/channel/UCg5coizwJj_G7oTCEtjkpXA" target="_blank">YouTube</a>
+                </li>
+                <li><a href="https://www.twitch.tv/piquixel" target="_blank">Twitch</a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="side-menu">
+        <a href="#first">P1</a>
+        <a href="#sec">P2</a>
+        <a href="#third">P3</a>
+        <a href="#fourth">P4</a>
+        <a href="#fifth">P5</a>
+    </div>
+    <div class="box" id="first">
+        <h1>Parallax Effect</h1>
+    </div>
+    <div class="box" id="sec">
+        <h1 class="dark">White</h1>
+    </div>
+    <div class="box" id="third">
+        <h1>This is the second box</h1>
+    </div>
+    <div class="box" id="fourth">
+        <h1 class="dark">White #2</h1>
+    </div>
+    <div class="box" id="fifth">
+        <h1>Final Box</h1>
+    </div>
+</body>
+
+</html>

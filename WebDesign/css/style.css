@@ -1,0 +1,276 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    font-family: sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+    overflow: hidden;
+}
+
+.main{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    background-image: url(../../images/desert\ 1.png);
+    background: linear-gradient(to right, #9c27b0, #8ecdff);
+}
+
+nav{
+    width: 100%;
+    height: 80px;
+    top: -20px;
+    position: fixed;
+    margin: 20px auto;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    background: transparent;
+}
+
+nav ul{
+    float: right;
+    width: fit-content;
+    background: #272727bf;
+    padding: 32px 16px;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0 0 10px #000000bf;
+}
+
+.nav-links ul li a::before{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background: rgba(255,255,255,.15);
+    width: 100%;
+    height: 100%;
+    transform: scale(0);
+    transform-origin: bottom right;
+    transition: transform .3s, border-radius .3s;
+    border-radius: 0;
+}
+
+.nav-links ul li:hover a::before{
+    transform: scale(1);
+    border-radius: 7.5px;
+    transform-origin: top left;
+}
+
+.logo{
+    flex-basis: 20%;
+    position: relative;
+    left: 60px;
+}
+
+.logo img{
+    width: 150px;
+}
+
+.nav-links{
+    flex: 1;
+    text-align: right;
+    position: relative;
+    left: -60px;
+}
+
+.nav-links ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0;
+}
+
+.nav-links ul li a{
+    color: #fff;
+    text-decoration: none;
+    position: relative;
+    padding: 15px 20px;
+}
+
+.nav-links ul li a::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background: transparent;
+    width: 5px;
+    height: 5px;
+    border-radius: 5px;
+    transform: scale(0);
+    transition: .3s;
+}
+
+.nav-links ul li a.active::after{
+    background: #fff;
+    transform: scale(1);
+}
+
+.nav-links ul li a.active:hover::after{
+    bottom: -7.5px;
+}
+
+.information{
+    width: 1000px;
+    height: 1000px;
+    position: absolute;
+    top: 50%;
+    left: -10%;
+    transform: translateY(-50%);
+}
+
+#circle{
+    width: 1000px;
+    height: 1000px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    border-radius: 50%;
+    transform: rotate(0deg);
+    transition: .9s;
+}
+
+.feature img{
+    width: 70px;
+}
+
+.feature{
+    position: absolute;
+    display: flex;
+    color: #fff;
+}
+
+.feature div{
+    margin-left: 30px;
+}
+
+.feature div h1{
+    font-family: 'Nunito', sans-serif;
+}
+
+.feature div p{
+    margin-top: 8px;
+    font-family: 'Nunito', sans-serif;
+}
+
+.one{
+    top: 450px;
+    right: 50px;
+}
+
+.two{
+    top: 150px;
+    left: 350px;
+    transform: rotate(-90deg);
+}
+
+.three{
+    bottom: 450px;
+    left: 50px;
+    transform: rotate(-180deg);
+}
+
+.four{
+    bottom: 150px;
+    right: 350px;
+    transform: rotate(-270deg);
+}
+
+.mobile{
+    width: 200px;
+    position: absolute;
+    top: 50%;
+    left: 35%;
+    transform: translateY(-50%);
+    z-index: 1;
+}
+
+.controls{
+    position: absolute;
+    right: 10%;
+    top: 50%;
+    transform: translateY(-50%);
+    text-align: center;
+}
+
+.controls h3{
+    margin: 15px 0;
+    color: #fff;
+}
+
+#upBtn{
+    width: 15px;
+    cursor: pointer;
+}
+
+#downBtn{
+    width: 15px;
+    cursor: pointer;
+    transform: rotate(180deg);
+}
+
+.overlay{
+    width: 0;
+    height: 0;
+    border-top: 500px solid #fff;
+    border-right: 500px solid transparent;
+    border-bottom: 500px solid #fff;
+    border-left: 500px solid #fff;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.phonekit section{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    height: 100vh;
+    overflow: auto;
+}
+
+.phonekit section .container{
+    position: relative;
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    grid-template-rows: minmax(100px, auto);
+    margin: 40px;
+    grid-auto-flow: dense;
+}
+
+.container .card{
+    padding: 20px;
+    display: grid;
+    grid-gap: 10px;
+    place-items: center;
+    text-align: center;
+}
+
+.phonekit img{
+    position: relative;
+    max-width: 100px;
+    max-height: 400px;
+    z-index: 2;
+}
+
+.phonekit section::-webkit-scrollbar{
+    width: 10px;
+}
+
+.phonekit section::-webkit-scrollbar-thumb{
+    background: #00000080;
+    border: 3px solid #fff;
+    border-radius: 10px;
+}
+
+.phonekit section::-webkit-scrollbar-button{
+    background: transparent;
+}
